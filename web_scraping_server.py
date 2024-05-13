@@ -25,10 +25,6 @@ def scrape(data):
     if url.endswith('/index.html'):
         normalizeUrl = url.rstrip('/index.html')
     
-    
-    if normalizeUrl == "":
-        raise ValueError("URL is empty after normalization")
-
     if not re.match(url_regex, normalizeUrl):
         raise ValueError("URL is not valid")
     
